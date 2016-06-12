@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Five AngularJS Examples</title>
+    <link rel="Stylesheet" type="text/css" href="theme/Example4.css" />
+</head>
+<body>
+    <div ng-app="InstantSearch"" ng-controller="InstantSearchController">
+        <div class="bar">
+            <input type="text" ng-model="searchString" placeholder="Enter your search terms" />
+        </div>
+        <ul>
+            <li ng-repeat="article in articles | searchFor:searchString">
+                <a href="{{article.url}}">
+                    <img ng-src="{{article.image}}" /></a>
+                <p>
+                    {{article.title}}</p>
+            </li>
+        </ul>
+    </div>
+    <script src="http://localhost/CommonWeb/angularASPNet/angular.min.js"></script>
+    <script src="Scripts/Example4.js"></script>
+</body>
+</html>

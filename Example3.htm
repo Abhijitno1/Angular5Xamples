@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Five AngularJS Examples</title>
+    <link rel="Stylesheet" type="text/css" href="theme/Example3.css" />
+</head>
+<body>
+    <h1>Services</h1>
+    <form ng-app ng-controller="OrderFormController">
+        <ul>
+            <li ng-repeat="service in services" ng-click="toggleActive(service)" ng-class="{active:service.active}">                
+                {{service.name}} <span>{{service.price | currency}}</span>
+            </li>
+        </ul>
+        <div class="total">
+            Total: <span>{{calculateTotal() | currency}}</span>
+        </div>
+    </form>
+
+    <script src="http://localhost/CommonWeb/angularASPNet/angular.min.js"></script>
+    <script src="Scripts/Example3.js"></script>
+</body>
+</html>

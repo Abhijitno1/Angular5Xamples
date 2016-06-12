@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>AngularJS Routing example</title>
+    <!--<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="http://localhost/CommonWeb/bootstrap/content/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            padding-top: 10px;
+            background-color: #F5F5F5;
+        }
+
+        .nav > li {
+            float: none;
+            display: inline-block;
+            *display: inline; /* Internet Explorer 7 compatibility */
+            *zoom: 1;
+            vertical-align: top;
+        }
+    </style>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body ng-app="sampleApp">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <ul class="nav">
+                    <li><a href="#AddNewOrder"> Add New Order </a></li>
+                    <li><a href="#ShowOrders"> Show Order </a></li>
+                    <li><a href="#SearchOrder"> Search Order </a></li>
+                </ul>
+            </div>
+            <div class="col-md-8">
+                <div ng-view></div>
+            </div>
+        </div>
+    </div><!-- /.container -->
+
+    <script type="text/ng-template" id="add_order.html">
+        <h2> Add Order </h2>
+        {{message}}
+
+    </script>
+    <script type="text/ng-template" id="show_orders.html">
+        <h2> Show Orders </h2>
+        {{message}}
+
+    </script>
+
+    <!--	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>-->
+    <script src="http://localhost/CommonWeb/angular129/angular.min.js"></script>
+    <script src="http://localhost/CommonWeb/angular129/angular-route.min.js"></script>
+    <script src="Scripts/RoutingDemo.js"></script>
+</body>
+
+</html>

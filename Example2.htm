@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Five AngularJS Examples</title>
+    <link rel="Stylesheet" type="text/css" href="theme/Example2.css" />
+</head>
+<body>
+    <div id="main" ng-app ng-controller="InlineEditorController" ng-click="hideTooltip()">
+        <div class="tooltip" ng-show="showTooltip" ng-click="$event.stopPropagation()">
+            <input type="text" ng-model="value" />
+        </div>
+        <p ng-click="toggleTooltip($event)">{{value}}</p>
+    </div>
+
+    <script src="http://localhost/CommonWeb/angularASPNet/angular.min.js"></script>
+    <script src="Scripts/Example2.js"></script>
+</body>
+</html>
