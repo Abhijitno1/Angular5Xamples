@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Five AngularJS Examples</title>
+    <link rel="Stylesheet" type="text/css" href="theme/Common.css" />
+    <style>
+        ul.rating {
+            display: inline-block;
+            list-style-type: none;
+            padding-left: 0px;
+        }
+        ul.rating li {
+            display:inline-block;
+            padding: 0.2em;
+            cursor: pointer;
+        }
+        ul.rating li.star span {
+            content: '\2605';
+            position: absolute;
+            font-size: x-large;
+        }
+        .rating .filled {
+            color: #9cbad8;
+        }
+    </style>
+    <script type="text/javascript" src="Scripts/gauge.min.js"></script>
+</head>
+<body>
+    <div ng-app="RatingControllerDemo" ng-controller="RatingWidgetController">
+        <h3>Rating control built using angular js</h3>
+        <div>
+            Set Rating using widget property
+            <input type="text" ng-model="initialRating" />
+        </div>
+        <div style="height: 30px;"></div>
+        <div>
+            This is rating control bound to above text box 
+            <span class="star-rating" 
+                  star-rating rating-value="initialRating" data-max="5" on-rating-selected="rateFunction(rating)"></span>
+
+        </div>
+        <div>
+            <h3>Below rating controls are bound to guage control</h3>
+            <div style="width: 50%; float: left;">
+                <h5>Target Gauge</h5>
+                <canvas id="myGuage"></canvas>
+            </div>
+            <div style="width: 50%; float: left;">
+                <h5>Source Rating</h5>
+                <table>
+                    <tr>
+                        <td>Physics</td><td><span class="star-rating" star-rating=star-rating rating-value="physics" data-max="5"></span></td> 
+                    </tr>
+                    <tr>
+                        <td>Chemistry</td><td><span class="star-rating" star-rating=star-rating rating-value="chemistry" data-max="5"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Maths</td><td><span class="star-rating" star-rating=star-rating rating-value="maths" data-max="5"></span></td>
+                    </tr>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="http://localhost/CommonWeb/angularASPNet/angular.min.js"></script>
+    <script src="Scripts/RatingWidget.js"></script>
+</body>
+</html>
