@@ -39,23 +39,27 @@
                   star-rating rating-value="initialRating" data-max="5" on-rating-selected="rateFunction(rating)"></span>
 
         </div>
-        <div>
+        <div style="overflow:hidden;">
             <h3>Below rating controls are bound to guage control</h3>
             <div style="width: 50%; float: left;">
                 <h5>Target Gauge</h5>
                 <canvas id="myGuage"></canvas>
+                <div id="averageRating">{{averageRating}}</div>
             </div>
-            <div style="width: 50%; float: left;">
+            <div style="width: 50%; float: left; text-align:left;">
                 <h5>Source Rating</h5>
                 <table>
                     <tr>
-                        <td>Physics</td><td><span class="star-rating" star-rating=star-rating rating-value="physics" data-max="5"></span></td> 
+                        <td>Physics</td><td><span class="star-rating" star-rating=star-rating rating-value="physics" data-max="5"
+                            on-rating-selected="calculateAvg()"></span></td> 
                     </tr>
                     <tr>
-                        <td>Chemistry</td><td><span class="star-rating" star-rating=star-rating rating-value="chemistry" data-max="5"></span></td>
+                        <td>Chemistry</td><td><span class="star-rating" star-rating=star-rating rating-value="chemistry" data-max="5"
+                            on-rating-selected="calculateAvg()"></span></td>
                     </tr>
                     <tr>
-                        <td>Maths</td><td><span class="star-rating" star-rating=star-rating rating-value="maths" data-max="5"></span></td>
+                        <td>Maths</td><td><span class="star-rating" star-rating=star-rating rating-value="maths" data-max="5"
+                            on-rating-selected="calculateAvg()"></span></td>
                     </tr>
                 </div>
             </div>
