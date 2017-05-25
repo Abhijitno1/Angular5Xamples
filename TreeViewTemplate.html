@@ -1,0 +1,28 @@
+﻿<ul class="nav nav-pills nav-stacked" >
+    <li class="presentation">
+        <a href="#">
+            <div>
+                <span ng-show="branch.children.length>0 && !branch.isExpanded">
+                    <i class="fa fa-plus" ng-click="branch.isExpanded = true"></i>
+                </span>
+                <span ng-show="branch.children.length>0 && branch.isExpanded">
+                    <i class="fa fa-minus" ng-click="branch.isExpanded = false"></i>
+                </span>
+                <span ng-show="!branch.isSelected">
+                    <i class="fa fa-square-o" ng-click="alert(branch.isSelected)"></i>
+                </span>
+                <span ng-show="branch.isSelected">
+                    <i class="fa fa-check fa-square-o" ng-click="alert(branch.isSelected)"></i>
+                </span>
+                {{branch.name}}
+            </div>
+        </a>
+    </li>
+</ul>
+<div class="tree" ng-if="branch.isExpanded">
+    <ul class="nav nav-pills nav-stacked">
+        <li class="presentation" ng-repeat="child in branch.children">
+            <tree-view branch="child"></tree-view>
+        </li>
+    </ul>
+</div>

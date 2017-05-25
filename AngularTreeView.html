@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="Angular5Xamples">
+<head>
+    <title>Treeview Built using AngularJS Directive</title>
+    <link href="http://localhost/CommonWeb/Bootstrap/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="http://localhost/CommonWeb/FontAwesome470/Content/font-awesome.min.css" rel="stylesheet" />
+    <style>
+        .tree {
+            margin-left: 20px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" ng-controller="AngularTreeViewCtrl as vm">
+        <div class="row">
+            <div class="col-md-3">
+                <button class="btn btn-default" ng-click="vm.toggleExpandCollapseTree()">{{vm.expandTreeText}}</button>
+                <tree-view branch="vm.data"></tree-view>
+            </div>
+        </div>
+    </div>
+    <script src="http://localhost/CommonWeb/jquery/jquery-1.9.1.min.js"></script>
+    <script src="http://localhost/CommonWeb/angularASPNet/angular.min.js"></script>
+    <script src="http://localhost/CommonWeb/Bootstrap/Scripts/Bootstrap.min.js"></script>
+    <script src="Scripts/AngularTreeView.js"></script>
+    <script src="Scripts/TreeViewDirective.js"></script>
+</body>
+</html>
