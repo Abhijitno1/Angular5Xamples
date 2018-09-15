@@ -1,0 +1,8 @@
+﻿<div class="panel panel-primary">
+    <div class="panel-heading" ng-click="toggleCollapse()">
+        <span style="padding: 3px 50px; color: navy" level-display2="level usr-info usr-warning usr-problem usr-error">{{name}}</span>
+        <button class="btn btn-xs btn-info pull-right" ng-click="incrementLevel($event)">Increment Level</button>
+    </div>
+    <div class="panel-body" ng-hide="collapsed" ng-transclude>
+    </div>
+</div>

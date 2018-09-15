@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="myApp">
+<head>
+    <title>AngularJS Structural Directives</title>
+    <link href="http://localhost/CommonWeb/Bootstrap/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="http://localhost/CommonWeb/jquery/jquery-1.9.1.min.js"></script>
+    <script src="http://localhost/CommonWeb/Bootstrap/Scripts/bootstrap.min.js"></script>
+    <script src="http://localhost/CommonWeb/angularJS/angular.js"></script>
+    <script src="../scripts/m7x3.js"></script>
+</head>
+<body ng-controller="mainController" class="container" style="padding-top:30px;">
+    <h3>Controller as ViewModel and Use of Modal as directive</h3>
+    <div ng-repeat="user in users">
+        <user-info-card-v3 user="user"></user-info-card-v3>        
+    </div>
+</body>
+</html>

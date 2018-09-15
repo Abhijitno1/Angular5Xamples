@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="myApp">
+<head>
+    <title></title>
+    <title>AngularJS Structural Directives</title>
+    <link href="http://localhost/CommonWeb/Bootstrap/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="http://localhost/CommonWeb/jquery/jquery-1.9.1.min.js"></script>
+    <script src="http://localhost/CommonWeb/Bootstrap/Scripts/bootstrap.min.js"></script>
+    <script src="http://localhost/CommonWeb/angularASPNet/angular.min.js"></script>
+    <script src="../scripts/m5x1.js"></script>
+</head>
+<body ng-controller="mainController" class="container" style="padding-top:30px;">
+    <h3>Custom ng-repeat</h3>
+    <div my-repeater-v2="hunter in bountyHunters">{{hunter.age}}</div>
+    <hr/>
+    <button class="btn btn-primary" ng-click="addTest()">Add new Hunter</button>
+    <button class="btn btn-primary" ng-click="removeTest()">Remove last Hunter</button>
+</body>
+</html>

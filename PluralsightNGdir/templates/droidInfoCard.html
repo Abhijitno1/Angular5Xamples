@@ -1,0 +1,8 @@
+﻿<div class="panel panel-primary">
+    <div class="panel-heading" ng-click="toggleCollapse()">{{droid.name}}</div>
+    <div class="panel-body" ng-hide="collapsed" level-display2="droid.level usr-info usr-warning usr-problem usr-error">
+        <h4>Specifications</h4>
+        <p>{{droid.specifications.manufacturer}} - {{droid.specifications.type}} - {{droid.specifications.productLine}}</p>
+        <button class="btn btn-info" ng-click="incrementLevel()">Increment Level</button>
+    </div>
+</div>
